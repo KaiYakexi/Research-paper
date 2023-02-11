@@ -2,13 +2,13 @@
 %% Allgemeine Angaben                                                %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\imaautor}{Johannes Lipp}                                         % Name des Autors
-\newcommand{\imamatnr}{310378}                                                % Matrikelnummer des Autors
-\newcommand{\imaarbeit}{Master's Thesis}                     % Art der Arbeit (Bachelor-, Masterarbeit, ...)
-\newcommand{\imatitel}{Applying External Knowledge Bases and User-assisted Semantic Modelling to Evolve a Semantic Knowledge Graph}                               	 						  % Titel/Thema    
+\newcommand{\imaautor}{Kaimao Sheng}                                         % Name des Autors
+\newcommand{\imamatnr}{409541}                                                % Matrikelnummer des Autors
+\newcommand{\imaarbeit}{Research Paper}                     % Art der Arbeit (Bachelor-, Masterarbeit, ...)
+\newcommand{\imatitel}{Evaluation of part geometry influence on in-situ anomaly detection methods of laser powder fusion bed processes}                               	 						  % Titel/Thema    
 \newcommand{\imaschlagworte}{Schlagwort 1, Schlagwort 2, ...}                 % Schlagworte der Arbeit    
 \newcommand{\imaprof}{Prof. Dr.-Ing. Tobias Meisen}                           % Name des Professors
-\newcommand{\imabetreuer}{M.Sc. Andr\'e Pomp}                                % Name des Betreuers
+\newcommand{\imabetreuer}{M.Sc. Hans Aoyang Zhou}                                % Name des Betreuers
 \newcommand{\imadatum}{11.11.17}                                              % Monat und Jahr der Abgabe
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,24 +16,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \documentclass[
-        paper           = A4,                          % Papierformat
-        twoside         = true,                        % Doppelseitig
-        fontsize        = 11pt,                        % Schriftgröße
-        BCOR            = 20mm,                        % Bindekorrektur
-        DIV             = 15,                          % Satzspiegelberechnung
-        parskip         = full,                        % Absatzformatierung
-        headsepline     = true,                        % Trennline zum Seitenkopf
-        footsepline     = true,                        % Trennline zum Seitenfuß
-        headinclude     = true,                        % Seitenkopf gehört zum Seitentext
-        footinclude     = false,                       % Seitenfuß gehört zum Seitentext
-        index           = totoc,                       % Index im Inhaltsverzeichnis
-        listof          = totoc,                       % Abbildungs- und Tabellenverzeichnis im Inhaltsverzeichnis
-        bibliography    = totoc,                       % Literaturverzeichnis im Inhaltsverzeichnis
-        cleardoublepage = empty,                       % Seitenkopf und -fuß auf leeren Seiten
-        draft           = false,                       % Entwurfsmodus
-        numbers         = noenddot                     % Keine abschließenden Punkte in Überschriftnummerierung
-    ]
-    {scrbook}                                          % KOMA-Script-Klasse
+    paper           = A4,                          % Papierformat
+    twoside         = false,                       % Doppelseitig
+    fontsize        = 11pt,                        % Schriftgröße
+    BCOR            = 0mm,                         % Bindekorrektur
+    DIV             = 15,                          % Satzspiegelberechnung
+    parskip         = full,                        % Absatzformatierung
+    headsepline     = true,                        % Trennline zum Seitenkopf
+    footsepline     = true,                        % Trennline zum Seitenfuß
+    headinclude     = true,                        % Seitenkopf gehört zum Seitentext
+    footinclude     = false,                       % Seitenfuß gehört zum Seitentext
+    index           = totoc,                       % Index im Inhaltsverzeichnis
+    listof          = totoc,                       % Abbildungs- und Tabellenverzeichnis im Inhaltsverzeichnis
+    bibliography    = totoc,                       % Literaturverzeichnis im Inhaltsverzeichnis
+    cleardoublepage = plain,                       % Seitenkopf und -fuß auf leeren Seiten
+    draft           = false,                       % Entwurfsmodus
+    numbers         = noenddot                     % Keine abschließenden Punkte in Überschriftnummerierung
+]{scrbook}                                         % KOMA-Script-Klasse
 
     \pagestyle{headings}                               % lebender Kolumnentitel
     \setkomafont{pagehead}{\sffamily}                  % Schriftart im Seitenkopf
@@ -243,7 +242,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Inhalt                                                            %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+    
     \begin{document}
 
         \frontmatter                                           % Vorspann
@@ -251,14 +250,8 @@
             \pdfbookmark[1]{Title}{title}                  % Link im PDF zum Deckblatt
             \maketitle                                         % Titelei erzeugen
             \enlargethispage{100\baselineskip}
-
-            \thispagestyle{empty}                              % Leerseite einfügen
-            \null\newpage
-            \thispagestyle{empty}
-            \null\newpage
-
-            \cleardoublepage                                   % Link im PDF zum Inhaltsverzeichnis
-            \phantomsection
+                                              % Link im PDF zum Inhaltsverzeichnis
+            
             \pdfbookmark[1]{Table of Contents}{toc}
             \tableofcontents                                   % Inhaltsverzeichnis einfügen
 
@@ -273,10 +266,10 @@
         \mainmatter                                            % Hauptteil
 
             \include{inhalt/1_introduction}                        % einzelne Kapitel einfügen
-            \include{inhalt/2_background}
-            \include{inhalt/3_related_work}
-            \include{inhalt/4_design_implementation}
-            \include{inhalt/5_evaluation}
+            \include{inhalt/2_Literature_review}
+            \include{inhalt/3_Methodology}
+            \include{inhalt/4_Results}
+            \include{inhalt/5_Discussion}
             \include{inhalt/6_conclusion}
 
 
