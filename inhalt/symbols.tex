@@ -1,0 +1,529 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Überschriften                                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{lat}{
+    name        = {\sffamily \Large \textbf{Lateinische Buchstaben} \protect\phantomsection \protect\addcontentsline{toc}{section}{Lateinische Buchstaben}},
+    description = {\nopostdesc},
+    sort        = a_lat,
+    type        = symbolslist,
+}
+
+\newglossaryentry{gri}{
+    name        = {\sffamily \Large \textbf{Griechische Buchstaben} \protect\phantomsection \protect\addcontentsline{toc}{section}{Griechische Buchstaben}},
+    description = {\nopostdesc},
+    sort        = b_gri,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx}{
+    name        = {\sffamily \Large \textbf{Tiefgestellte Indizes} \protect\phantomsection \protect\addcontentsline{toc}{section}{Tiefgestellte Indizes}},
+    description = {\nopostdesc},
+    sort        = c_indx,
+    type        = symbolslist,
+}
+
+\newglossaryentry{exp}{
+    name        = {\sffamily \Large \textbf{Hochgestellte Indizes} \protect\phantomsection \protect\addcontentsline{toc}{section}{Hochgestellte Indizes}},
+    description = {\nopostdesc},
+    symbol      = {},
+    sort        = d_exp,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw}{
+    name        = {\sffamily \Large \textbf{Schreibweisen} \protect\phantomsection \protect\addcontentsline{toc}{section}{Schreibweisen}},
+    description = {\nopostdesc},
+    symbol      = {},
+    sort        = e_sw,
+    type        = symbolslist,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Lateinische Buchstaben                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{symb:kraft}{
+    name        = {\ensuremath{F}},
+    description = {Kraft},
+    symbol      = {\ensuremath{\si{\newton}}},
+    parent      = {lat},
+    sort        = a_lat_b_f,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:magnetischeflussdichte}{
+    name        = {\ensuremath{B}},
+    description = {magnetische Flussdichte (auch: magnetische Induktion)},
+    symbol      = {\ensuremath{\si{\tesla}}},
+    parent      = {lat},
+    sort        = a_lat_b_b,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:elektrischeflussdichte}{
+    name        = {\ensuremath{D}},
+    description = {elektrische Flussdichte (auch:  elektrische Erregung)},
+    symbol      = {\ensuremath{\si{\ampere\second/\meter^2}}},
+    parent      = {lat},
+    sort        = a_lat_b_d,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:elektrischefeldstaerke}{
+    name        = {\ensuremath{E}},
+    description = {elektrische Feldstärke},
+    symbol      = {\ensuremath{\si{\volt/\meter}}},
+    parent      = {lat},
+    sort        = a_lat_b_e,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:magnetischefeldstaerke}{
+    name        = {\ensuremath{H}},
+    description = {magnetische Feldstärke},
+    symbol      = {\ensuremath{\si{\ampere/\meter}}},
+    parent      = {lat},
+    sort        = a_lat_b_h,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:stromdichte}{
+    name        = {\ensuremath{J}},
+    description = {elektrische Stromdichte (auch: Leitungsstromdichte)},
+    symbol      = {\ensuremath{\si{\ampere/\meter^2}}},
+    parent      = {lat},
+    sort        = a_lat_b_j,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:periodendauer}{
+    name        = {\ensuremath{T}},
+    description = {Periodendauer},
+    symbol      = {\ensuremath{\si{\second}}},
+    parent      = {lat},
+    sort        = a_lat_b_t,
+    type        = symbolslist,
+}
+
+% a_lat_c   Lateinische Großbuchstaben sonstige
+
+\newglossaryentry{symb:natuerlichezahlen}{
+    name        = {\ensuremath{\mathbb{N}}},
+    description = {Menge der natürlichen Zahlen},
+    parent      = {lat},
+    sort        = a_lat_c_n,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:reellezahlen}{
+    name        = {\ensuremath{\mathbb{R}}},
+    description = {Menge der reellen Zahlen},
+    parent      = {lat},
+    sort        = a_lat_c_r,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:komplexezahlen}{
+    name        = {\ensuremath{\mathbb{C}}},
+    description = {Menge der komplexen Zahlen},
+    parent      = {lat},
+    sort        = a_lat_c_c,
+    type        = symbolslist,
+}
+
+% a_lat_d   Lateinische Kleinbuchstaben fett 
+
+% a_lat_e   Lateinische Kleinbuchstaben 
+
+\newglossaryentry{symb:masse}{
+    name        = {\ensuremath{m}},
+    description = {Masse},
+    symbol      = {\ensuremath{\si{\kilogram}}},
+    parent      = {lat},
+    sort        = a_lat_e_m,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:netzeingabej}{
+	name        = {\ensuremath{net_j}},
+	description = {Netzeingabe des Neurons j},
+	parent      = {lat},
+	sort        = a_lat_e_n,
+	type        = symbolslist,
+}
+
+\newglossaryentry{symb:geschwindigkeit}{
+    name        = {\ensuremath{v}},
+    description = {Geschwindigkeit},
+    symbol      = {\ensuremath{\si{\meter/\second}}},
+    parent      = {lat},
+    sort        = a_lat_e_v,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:beschleunigung}{
+    name        = {\ensuremath{a}},
+    description = {Beschleunigung},
+    symbol      = {\ensuremath{\si{\meter/\second^2}}},
+    parent      = {lat},
+    sort        = a_lat_e_a,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:zeit}{
+    name        = {\ensuremath{t}},
+    description = {Zeit},
+    symbol      = {\ensuremath{\si{\second}}},
+    parent      = {lat},
+    sort        = a_lat_e_t,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:imaginaereeinheit}{
+    name        = {\ensuremath{\mathrm{j}}},
+    description = {imaginäre Einheit \ensuremath{\left( \sqrt{-1} \right) }},
+    parent      = {lat},
+    sort        = a_lat_e_j,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:eulerschezahl}{
+    name        = {\ensuremath{\mathrm{e}}},
+    description = {\textsc{Euler}sche Zahl ($ \mathrm{e} = \num{2.718281}\ldots $)},
+    parent      = {lat},
+    sort        = a_lat_e_e,
+    type        = symbolslist,
+}
+\newglossaryentry{symb:koordr}{
+    name        = {\ensuremath{r}},
+    description = {Radialkomponente im Zylinderkoordinatensystem},
+    symbol      = {\ensuremath{\si{\meter}}},
+    parent      = {lat},
+    sort        = a_lat_e_r,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:koordx}{
+    name        = {\ensuremath{x}},
+    description = {$ x $-Komponente im kartesischen Koordinatensystem},
+    symbol      = {\ensuremath{\si{\meter}}},
+    parent      = {lat},
+    sort        = a_lat_e_x,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:koordy}{
+    name        = {\ensuremath{y}},
+    description = {$ y $-Komponente im kartesischen Koordinatensystem},
+    symbol      = {\ensuremath{\si{\meter}}},
+    parent      = {lat},
+    sort        = a_lat_e_y,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:koordz}{
+    name        = {\ensuremath{z}},
+    description = {$ z $-Komponente im kartesischen/zylindrischen KS},
+    symbol      = {\ensuremath{\si{\meter}}},
+    parent      = {lat},
+    sort        = a_lat_e_z,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:einheitsvektor}{
+    name        = {\ensuremath{\mathrm{e}}},
+    description = {Einheitsvektor},
+    symbol      = {\ensuremath{1}},
+    parent      = {lat},
+    sort        = a_lat_e_e,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:eingangi}{
+	name        = {\ensuremath{\(x_i\)}},
+	description = {Eingang i eines künstlichen Neurons},
+	parent      = {lat},
+	sort        = a_lat_e_xi,
+	type        = symbolslist,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Griechische Buchstaben                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{symb:kreisfrequenz}{
+    name        = {\ensuremath{\omega}},
+    description = {Kreisfrequenz},
+    symbol      = {\ensuremath{\si{\per\second}}},
+    parent      = {gri},
+    sort        = b_gri_d_z,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:aktivierungj}{
+	name        = {\ensuremath{o_j}},
+	description = {Aktivierung des künstlichen Neurons j},
+	parent      = {gri},
+	sort        = b_gri_d_s,
+	type        = symbolslist,
+}
+
+\newglossaryentry{symb:aktivierungsfunktion}{
+	name        = {\ensuremath{\varphi}},
+	description = {Aktivierungsfunktion des künstlichen Neurons},
+	parent      = {gri},
+	sort        = b_gri_d_s,
+	type        = symbolslist,
+}
+
+\newglossaryentry{symb:schwellwertj}{
+	name        = {\ensuremath{\theta_j}},
+	description = {Schwellwert des künstlichen Neurons j},
+	parent      = {gri},
+	sort        = b_gri_d_s,
+	type        = symbolslist,
+}
+\newglossaryentry{symb:pi}{
+    name        = {\ensuremath{\uppi}},
+    description = {Kreiszahl ($ \uppi = \num{3,141592}\ldots $)},
+    parent      = {gri},
+    sort        = b_gri_d_q,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:permittivitaet}{
+    name        = {\ensuremath{\varepsilon}},
+    description = {Permittivität (auch: Dielektrische Leitfähigkeit)},
+    symbol      = {\ensuremath{\si{\ampere\second/(\volt\meter)}}},
+    parent      = {gri},
+    sort        = b_gri_d_e,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:kroneckerdelta}{
+    name        = {\ensuremath{\delta_{ij}}},
+    description = {\textsc{Kronecker}-Delta (manchmal auch: \textsc{Kronecker}-Symbol)},
+    parent      = {gri},
+    sort        = b_gri_d_d,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:permeabilitaet}{
+    name        = {\ensuremath{\mu}},
+    description = {magnetische Permeabilität (auch: magnetische Leitfähigkeit)},
+    symbol      = {\ensuremath{\si{\volt\second/(\ampere\meter)}}},
+    parent      = {gri},
+    sort        = b_gri_d_m,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:leitfaehigkeit}{
+    name        = {\ensuremath{\sigma}},
+    description = {elektrische Leitfähigkeit (auch: Konduktivität)},
+    symbol      = {\ensuremath{\si{\per\ohm\per\meter}}},
+    parent      = {gri},
+    sort        = b_gri_d_s,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:raumladungsdichte}{
+    name        = {\ensuremath{\rho}},
+    description = {elektrische Raumladungsdichte},
+    symbol      = {\ensuremath{\si{\ampere\second/\meter^3}}},
+    parent      = {gri},
+    sort        = b_gri_d_r,
+    type        = symbolslist,
+}
+
+\newglossaryentry{symb:koordphi}{
+    name        = {\ensuremath{\varphi}},
+    description = {Tangentialkomponente im Zylinderkoordinatensystem},
+    symbol      = {\ensuremath{\si{\radian}}},
+    parent      = {gri},
+    sort        = b_gri_d_v,
+    type        = symbolslist,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tiefgestellte Indizes                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{indx:maximal}{
+    name        = {\ensuremath{\mathrm{max}}},
+    description = {maximal},
+    parent      = {indx},
+    sort        = c_indx_m,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:relativ}{
+    name        = {\ensuremath{\mathrm{r}}},
+    description = {relativ},
+    parent      = {indx},
+    sort        = c_indx_r,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:vakuum}{
+    name        = {\ensuremath{0}},
+    description = {im Vakuum},
+    parent      = {indx},
+    sort        = c_indx_0,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:tangential}{
+    name        = {\ensuremath{\mathrm{t}}},
+    description = {tangential},
+    parent      = {indx},
+    sort        = c_indx_t,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:x}{
+    name        = {\ensuremath{\mathrm{x}}},
+    description = {in x-Richtung},
+    parent      = {indx},
+    sort        = c_indx_x,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:y}{
+    name        = {\ensuremath{\mathrm{y}}},
+    description = {in y-Richtung},
+    parent      = {indx},
+    sort        = c_indx_y,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:z}{
+    name        = {\ensuremath{\mathrm{z}}},
+    description = {in z-Richtung},
+    parent      = {indx},
+    sort        = c_indx_z,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:phi}{
+    name        = {\ensuremath{\varphi}},
+    description = {in tangentialer Richtung},
+    parent      = {indx},
+    sort        = c_indx_zz,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:xy}{
+    name        = {\ensuremath{\mathrm{xy}}},
+    description = {in Richtung y, in der Fläche normal zu x},
+    parent      = {indx},
+    sort        = c_indx_xy,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:yz}{
+    name        = {\ensuremath{\mathrm{yz}}},
+    description = {in Richtung z, in der Fläche normal zu y},
+    parent      = {indx},
+    sort        = c_indx_yz,
+    type        = symbolslist,
+}
+
+\newglossaryentry{indx:zx}{
+    name        = {\ensuremath{\mathrm{zx}}},
+    description = {in Richtung x, in der Fläche normal zu z},
+    parent      = {indx},
+    sort        = c_indx_zx,
+    type        = symbolslist,
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hochgestellte Indizes                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{exp:transponiert}{
+    name        = {\ensuremath{\mathrm{T}}},
+    description = {Transponierte einer Matrix},
+    parent      = {exp},
+    sort        = d_exp_t,
+    type        = symbolslist,
+}
+
+\newglossaryentry{exp:konjugiertkomplex}{
+    name        = {\ensuremath{*}},
+    description = {Konjugation einer komplexen Zahl},
+    parent      = {exp},
+    sort        = d_exp_s,
+    type        = symbolslist,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Schreibweisen                                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{sw:differentiation}{
+    name        = {\ensuremath{x'}},
+    description = {Differentiation},
+    parent      = {sw},
+    sort        = d_sw_0,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:erstezeitlichedifferentiation}{
+    name        = {\ensuremath{\dot{x}}},
+    description = {Erste Differentiation nach der Zeit},
+    parent      = {sw},
+    sort        = d_sw_1,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:zweitezeitlichedifferentiation}{
+    name        = {\ensuremath{\ddot{x}}},
+    description = {Zweite Differentiation nach der Zeit},
+    parent      = {sw},
+    sort        = d_sw_2,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:amplitude}{
+    name        = {\ensuremath{\widehat{x}}},
+    description = {Amplitude (auch: Maximalwert)},
+    parent      = {sw},
+    sort        = d_sw_3,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:mittelwert}{
+    name        = {\ensuremath{\overline{x}}},
+    description = {Mittelwert},
+    parent      = {sw},
+    sort        = d_sw_4,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:vektor}{
+    name        = {\ensuremath{\vec{x}}},
+    description = {Vektor},
+    parent      = {sw},
+    sort        = d_sw_5,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:matrix}{
+    name        = {\ensuremath{\mathbf{X}}},
+    description = {Matrix},
+    parent      = {sw},
+    sort        = d_sw_6,
+    type        = symbolslist,
+}
+
+\newglossaryentry{sw:tensor}{
+    name        = {\ensuremath{\widetilde{\mathbf{X}}}},
+    description = {Tensor},
+    parent      = {sw},
+    sort        = d_sw_7,
+    type        = symbolslist,
+}

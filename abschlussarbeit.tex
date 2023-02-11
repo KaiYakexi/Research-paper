@@ -1,0 +1,299 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Allgemeine Angaben                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\imaautor}{Johannes Lipp}                                         % Name des Autors
+\newcommand{\imamatnr}{310378}                                                % Matrikelnummer des Autors
+\newcommand{\imaarbeit}{Master's Thesis}                     % Art der Arbeit (Bachelor-, Masterarbeit, ...)
+\newcommand{\imatitel}{Applying External Knowledge Bases and User-assisted Semantic Modelling to Evolve a Semantic Knowledge Graph}                               	 						  % Titel/Thema    
+\newcommand{\imaschlagworte}{Schlagwort 1, Schlagwort 2, ...}                 % Schlagworte der Arbeit    
+\newcommand{\imaprof}{Prof. Dr.-Ing. Tobias Meisen}                           % Name des Professors
+\newcommand{\imabetreuer}{M.Sc. Andr\'e Pomp}                                % Name des Betreuers
+\newcommand{\imadatum}{11.11.17}                                              % Monat und Jahr der Abgabe
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optionen zum Layout                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \documentclass[
+        paper           = A4,                          % Papierformat
+        twoside         = true,                        % Doppelseitig
+        fontsize        = 11pt,                        % Schriftgröße
+        BCOR            = 20mm,                        % Bindekorrektur
+        DIV             = 15,                          % Satzspiegelberechnung
+        parskip         = full,                        % Absatzformatierung
+        headsepline     = true,                        % Trennline zum Seitenkopf
+        footsepline     = true,                        % Trennline zum Seitenfuß
+        headinclude     = true,                        % Seitenkopf gehört zum Seitentext
+        footinclude     = false,                       % Seitenfuß gehört zum Seitentext
+        index           = totoc,                       % Index im Inhaltsverzeichnis
+        listof          = totoc,                       % Abbildungs- und Tabellenverzeichnis im Inhaltsverzeichnis
+        bibliography    = totoc,                       % Literaturverzeichnis im Inhaltsverzeichnis
+        cleardoublepage = empty,                       % Seitenkopf und -fuß auf leeren Seiten
+        draft           = false,                       % Entwurfsmodus
+        numbers         = noenddot                     % Keine abschließenden Punkte in Überschriftnummerierung
+    ]
+    {scrbook}                                          % KOMA-Script-Klasse
+
+    \pagestyle{headings}                               % lebender Kolumnentitel
+    \setkomafont{pagehead}{\sffamily}                  % Schriftart im Seitenkopf
+    \setkomafont{pagenumber}{\sffamily}                % Schriftart im Seitenfuß
+    \addtokomafont{captionlabel}{\small\bfseries}      % Schriftart Abbildungslabel
+    \addtokomafont{caption}{\small}                    % Schriftart Abbildungsunterschriften
+    \setcapindent{2em}                                 % Einzug bei Abbildungsunterschriften
+    \delimitershortfall = -0.1pt                       % Klammergröße von äußeren Klammern vergrößern
+
+    \usepackage[english]{babel}                        % neue deutsche Rechtschreibung
+    \usepackage[utf8]{inputenc}                        % UTF8 Unterstützung
+    \usepackage[T1]{fontenc}                           % T1-Kodierung verwenden
+    \usepackage{helvet}                                % Schriftfamilie Helvetica Alternativen sind auch möglich -> like Arial
+    \renewcommand{\familydefault}{\sfdefault}
+    \setlength{\parindent}{0em}
+    \setlength{\parskip}{8pt}
+    \renewcommand{\baselinestretch}{1.3}
+    
+    \usepackage{microtype}                             % optischer Randausgleich
+    \usepackage{textcomp}                              % Erweiterung der Schriftzeichen
+    \usepackage{ellipsis}                              % Korrigiert den Weißraum um Auslassungspunkte
+    \renewcommand{\labelitemi}{$ \triangleright $}     % Aufzählungszeichen
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pakete                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \usepackage{graphicx}     % Einbinden von Grafiken
+    \usepackage{amsmath}      % Formeln, Formelumgebung, ...
+    \usepackage{amssymb}      % Mathematische Symbole
+    \usepackage{upgreek}      % Nichtkursive griechische Buchstaben
+    \usepackage{xcolor}       % Farben ermöglichen
+    \usepackage{bigstrut}     % Zeilenhöhe in Tabellen
+    \usepackage{multirow}     % Zellen über mehrere Zeilen in Tabellen
+    \usepackage{subfig}       % Abbildung mit mehreren Grafiken
+    \usepackage{colortbl}     % Farbige Tabellenzeilen
+    \usepackage{tikz}		  % Erstellen von tikzPlots
+	\usepackage{pgfplots}	  % Erstellen von pgfPlots
+	\usepackage{mathtools}	  % Benutzen von mathematischen Funktionen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Zahlenwerte und Einheiten                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \usepackage[
+        decimalsymbol = comma,     % Dezimaltrennzeichen
+    ]{siunitx} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Grafikpfade                                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \graphicspath{
+        {./grafiken/}
+        {./bilder/}
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PDF-Ausgabe und Links                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \usepackage{hyperref}
+    \hypersetup{
+        pdflang            = {de},                                 % Sprache
+        pdfauthor          = {\imaautor},                          % Autor
+        pdftitle           = {\imaarbeit},                         % Art der Arbeit
+        pdfsubject         = {\imatitel},                          % Thema
+        pdfkeywords        = {\imaschlagworte},                    % Schlagworte
+        pdfstartview       = {Fit},                                % Ansicht beim Öffnen
+        pdfduplex          = {DuplexFlipLongEdge},                 % Duplexdruck
+        pdfprintscaling    = {None},                               % Ausgabe skalieren
+        pdfpagemode        = {UseOutlines},                        % Inhaltsverzeichnis anzeigen
+        colorlinks         = {false},                              % Farbe anstatt Rahmen um Links
+        urlbordercolor     = {blue},                               % Farbe für URLs
+        bookmarksnumbered  = {true},                               % Kapitelnummer in Bookmarks
+        bookmarksopen      = {true},                               % Bookmarks aufklappen
+        bookmarksopenlevel = {1},                                  % Bookmarks Öffnungstiefe
+        pdfcreator         = {LaTeX},                              % Erstellungsprogramm
+        baseurl            = {http://www.rwth-aachen.de/},         % URL
+    }
+    \usepackage[all]{hypcap}                                       % Verlinkt direkt auf Grafiken
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Verzeichnisse                                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \usepackage[                                                                                      % Abkürzungsverzeichnis anlegen
+        acronym,                                                      % Abkürzungen
+        toc,                                                          % Eintrag im Inhaltsverzeichnis
+        shortcuts,                                                    % Abkürzungen für die Befehle
+    ]
+    {glossaries}
+    \newglossary[slg]{symbolslist}{syi}{syg}{Symbols}                      % Symbolverzeichnis anlegen
+    \makeglossaries                                                                                   % Verzeichnisse (unsortiert) erzeugen
+
+    \input{inhalt/acronyms}                                                                      % Abkürzungen einbinden
+    \input{inhalt/symbols}                                                                            % Symbole einbinden
+
+    \newglossarystyle{acronym}{                                                       % neuer Glossarstil für Akronyme
+        \renewenvironment{theglossary}                                                                % Glossarumgebung definieren
+            {\begin{longtable}[l]{ll}}
+            {\end{longtable}}
+        \renewcommand*{\glossaryheader}{}                                                             % Glossarüberschrift
+        \renewcommand*{\glsgroupheading}[1]{}                                                         % Gruppenüberschrift
+        \renewcommand*{\glossaryentryfield}[5]{\glstarget{##1}{##2} & ##3 \\ }                        % Glossareintrag
+        \renewcommand*{\glsgroupskip}{\\}                                                             % Gruppen trennen
+    }
+
+    \newglossarystyle{symbol}{                                                                        % neuer Glossarstil für Symbole
+        \renewenvironment{theglossary}                                                                % Glossarumgebung definieren
+            {\begin{longtable}[l]{lll}}
+            {\end{longtable}}
+        \renewcommand*{\glossaryheader}{}                                                             % Glossarüberschrift
+        \renewcommand*{\glsgroupheading}[1]{}                                                         % Gruppenüberschrift
+        \renewcommand*{\glossaryentryfield}[5]{\\ \multicolumn{3}{l}{\glstarget{##1}{##2}} \\ \\}     % Gruppenüberschrift als Glossareintrag
+        \renewcommand*{\glossarysubentryfield}[6]{\glstarget{##2}{##3} & $ \si{##5} $ & ##4 \\}       % Eintrag als Glossaruntereintrag
+        \renewcommand*{\glsgroupskip}{\\}                                                             % Gruppen trennen
+    }
+
+    % Diese Befehle sortieren die Einträge in den einzelnen Listen:
+	% makeindex -s abschlussarbeit.ist -t abschlussarbeit.alg -o abschlussarbeit.acr abschlussarbeit.acn
+	% makeindex -s abschlussarbeit.ist -t abschlussarbeit.slg -o abschlussarbeit.syi abschlussarbeit.syg
+	% makeindex -s abschlussarbeit.ist -t abschlussarbeit.glg -o abschlussarbeit.gls abschlussarbeit.glo
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Titelei                                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%    \titlehead{\vspace*{-35mm}\hspace*{70mm}\includegraphics*[height=32mm]{grafiken/IMALogo.jpg}}       % Titelkopf
+
+    \subject{\normalfont\textsf{Diese Arbeit wurde vorgelegt am
+                                Lehrstuhl für Informationsmanagement im Maschinenbau der
+                                Rheinisch-Westfälischen Technischen Hochschule Aachen}}         % Typisierung
+
+    \title{\LARGE \imatitel \vspace{10mm}}                                                    % Titel
+
+    \subtitle{\Large \imaarbeit \vspace{15mm}}                                         % Untertitel
+
+    \author{\textsf{\textbf{\imaautor}} \\
+            \textsf{\large Matriculation Number \imamatnr} \\[15mm]                             % Matrikelnummer
+            \begin{tabular}{rl}
+                \textsf{Supervisor:}&\textsf{\imabetreuer}\\
+                  \textsf{Examiner:}&\textsf{\imaprof}
+            \end{tabular} \vspace{15mm}}                   % Betreuer
+
+    \date{\textsf{Aachen, \imadatum}}                   % Datum
+
+%    \publishers{}                      % Herausgeber
+
+
+%    \dedication{\input{inhalt/widmung}}                                                                       % Widmung
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Custom figure command to inline figures.
+\newcommand{\Figure}[3]{
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[width=\textwidth]{#1}
+		\caption{#2.}\label{fig:#3}
+	\end{figure}
+}
+
+% Nice cross-referencing
+\usepackage{cleveref}
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+
+% Algorithms and pseudocode
+\usepackage{listings}
+\lstset{inputpath=./code}
+
+% Custom listings.
+\newcommand{\Text}[3]{
+	\lstinputlisting[
+	caption = {#2.},
+	frame = single,
+	basicstyle = \ttfamily,
+	label = {lst:#3}
+	]{#1}
+}
+
+\newcommand{\Java}[3]{
+	\lstinputlisting[
+	caption = {#2.},
+	frame = single,
+	basicstyle = \ttfamily,
+	label = {lst:#3},
+	language = Java
+	]{#1}
+}
+
+
+% Makes enumerations more modifiable
+\usepackage{enumitem}
+
+% Rotate tables
+% lscape.sty Produce landscape pages in a (mainly) portrait document.
+\usepackage{lscape}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Inhalt                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+        \frontmatter                                           % Vorspann
+
+            \pdfbookmark[1]{Title}{title}                  % Link im PDF zum Deckblatt
+            \maketitle                                         % Titelei erzeugen
+            \enlargethispage{100\baselineskip}
+
+            \thispagestyle{empty}                              % Leerseite einfügen
+            \null\newpage
+            \thispagestyle{empty}
+            \null\newpage
+
+            \cleardoublepage                                   % Link im PDF zum Inhaltsverzeichnis
+            \phantomsection
+            \pdfbookmark[1]{Table of Contents}{toc}
+            \tableofcontents                                   % Inhaltsverzeichnis einfügen
+
+            \printglossary[                                    % Abkürzungsverzeichnis
+                type     = acronym,                            % Typ
+                style    = acronym,                            % Stil
+                title    = Acronyms,              % Titel
+                toctitle = Acronyms,              % Eintrag im Inhaltsverzeichnis
+            ]
+
+
+        \mainmatter                                            % Hauptteil
+
+            \include{inhalt/1_introduction}                        % einzelne Kapitel einfügen
+            \include{inhalt/2_background}
+            \include{inhalt/3_related_work}
+            \include{inhalt/4_design_implementation}
+            \include{inhalt/5_evaluation}
+            \include{inhalt/6_conclusion}
+
+
+        \appendix                                              % Anhang
+
+            \include{inhalt/appendix}                            % Anhänge einfügen
+
+
+        \backmatter                                            % Nachspann
+
+            \printglossary[type=symbolslist, style=symbol]     % Symbolverzeichnis
+            \glsaddall                                         % alle Symbole anzeigen
+
+            \bibliographystyle{plaindin}                       % Stil des Literaturverzeichnis nach DIN 1505
+            \bibliography{literatur/references}                 % Einbinden der Bibliografiedatei (*.bib)
+            \nocite{*}                                         % alle Quellen anzeigen
+
+            \include{inhalt/declaration}                        % Erklärung einfügen
+
+    \end{document}
